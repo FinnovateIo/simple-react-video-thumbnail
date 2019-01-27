@@ -42,3 +42,4 @@ This package was bootstrapped using https://github.com/damaera/publish-react-com
 3. improve browser support
 4. improve customizability - pass down styles, props, and element replacements through props
 5. add additional testing and eslint
+6. resolve dependancy security issues found by github
