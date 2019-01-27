@@ -41,3 +41,4 @@ This package was bootstrapped using https://github.com/damaera/publish-react-com
 2. factor out dependancy on react-video-thumbnail
 3. improve browser support
 4. improve customizability - pass down styles, props, and element replacements through props
+5. add additional testing and eslint
