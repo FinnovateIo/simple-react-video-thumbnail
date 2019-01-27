@@ -1,27 +1,15 @@
 {
-  "name": "publish-react-component-boilerplate",
-  "version": "1.0.0",
-  "description": "Boilerplate for publishing react component to npm",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/damaera/publish-react-component-boilerplate.git"
-  },
-  "author": "Lutfi Mukti Damaera",
+  "name": "simple-react-video",
+  "version": "0.0.1",
+  "description": "Provides video tag and thumbnail at arbitrary point in video where these features are supported",
+  "author": "Ben Hart",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/damaera/publish-react-component-boilerplate/issues"
-  },
-  "homepage": "https://github.com/damaera/publish-react-component-boilerplate",
   "keywords": [
     "react-component",
-    "npm",
-    "publish",
-    "boilerplate",
+    "video",
+    "thumbnail",
     "react"
   ],
-  "options": {
-    "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
-  },
   "scripts": {
     "prepublish": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist",
     "lint": "eslint ./src",
@@ -29,7 +17,7 @@
     "testonly": "mocha $npm_package_options_mocha",
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js",
-    "start": "start-storybook -p 3000",
+    "start": "start-storybook -p 5000",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
@@ -53,14 +41,15 @@
     "react-addons-test-utils": "^15.0.0",
     "react-dom": "^15.0.0",
     "sinon": "^1.17.3",
-    "@storybook/react": "^3.2.10"
+    "@storybook/react": "^3.2.10",
+    "babel-runtime": "6.6.1"
   },
   "peerDependencies": {
     "react": "~0.14.8 || ^15.0.0",
-    "react-dom": "~0.14.8 || ^15.0.0"
+    "react-dom": "~0.14.8 || ^15.0.0",
+    "prop-types": "^15.5.8"
   },
   "dependencies": {
-    "babel-runtime": "^6.6.1",
-    "prop-types": "^15.5.8"
+    "react-video-thumbnail": "^0.1.3"
   }
 }

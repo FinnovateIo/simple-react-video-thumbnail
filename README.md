@@ -1,116 +1,43 @@
-# Publish React Component
-Boilerplate for publishing react component to npm
+# React Simple Video
 
-## Prerequisites
-- [NodeJS (Recomendation : Latest LTS Version: v6.11.3 (includes npm 3.10.10))](https://nodejs.org/en/download/)
-- [Yarn (optional, )]()
+This react component is designed to provide a quick, seamless way to display an html5 video component, and to select a point from the video to use as a thumbnail.
 
-## Installation
+Please note that for full functionality, the video link provided must pass CORS requirements.
 
-Just clone this repo and start developing your custom, testable react component
+In browsers that do not support full functionality, or when thumbnail generation fails. there are two fallback behaviors:
+
+1. a grey overlay with the play button displayed
+2. directly showing the video element.
+
+## Props
+
+Currently, the component uses only two properties, the video source URL(string), and the time in seconds of the frame that you want to use as a thumbnail (number).
+
+## Usage
 
 ```
-git clone https://github.com/damaera/publish-react-component &&
-cd publish-react-component
-```
-Install npm dependencies
-```
-yarn install
-```
+import VideoPlayer from 'react-simple-video'
 
-## Getting Started
+// ...
+render() {
 
-### React Components
-
-* **Adding New Component**
-
-  All React Components are in `src` directory.Components can use ES6 or ES5 standardization. 
-
-### React Storybook
-* **About**
-
-  Reference : [ReactStoryBook](https://storybook.js.org/).
-
-  Storybook is a UI development environment for your UI components. With it, you can visualize different states of your UI components and develop them interactively.
-
-  Storybook runs outside of your app. So you can develop UI components in isolation without worrying about app specific dependencies and requirements.
-
-* **Adding New Stories**
-
-  Add new file at `stories` directory, for example can be seen on `/stories/test.stories.js`. The file must match the following format `<name>.stories.js`.
-
-* **Adding Custom Head Tags (css/js/etc)**
-
-  Reference : [ReactStoryBook](https://storybook.js.org/configurations/add-custom-head-tags/)
-
-  Adding new file Simply create a file called `preview-head.html` inside the Storybook config directory `.storybook`.
-
-* *Example*
-  -	Structure
-    ```
-    project
-    └─── .storybook
-      └─── addons.js
-      └─── config.js
-      └─── preview-head.html
-    ```
-  - Inside `preview-head.html`
-    ```
-    <link href="https://link.com/style.css" />
-    <srcipt src="https://link.com/app.js"></script>
-    <script>
-      yourFunction()
-    </script>
-    ```
-
-* **Adding Local Resource**
-
-  For example, Place the `style.css` into the directory `.storybook`, and next import `./style.css` from the file `./storybook/config.js`.
-  ```
-  import './style.css'
-  ```
-
-* **Start StoryBook**
-  ```
-  yarn start
-  ```
-
-### Testing
-
-We are using [Airbnb/Enzyme](airbnb.io/enzyme/docs/api/) with [Mocha](https://mochajs.org/) as testing utility for React that makes it easier to assert, manipulate, and traverse your React Component's output.
-
-* **Sample**
-
-  Please open `src/__test__/Test.js`
-
-* **Adding New Testing**
-
-  Place your tests file in the directory `__test__`.
-
-* **Start Testing**
-  ```
-  yarn test
-  ```
-  or
-  ```
-  yarn test:watch
-  ```
-### Publishing to NPM
-
-Import your React Component into `index.js` which is in the root project. 
-
-* **Prepublish**
-All React components that are in the `src` directory, will be converted to es5 into `dist` directory to be read as npm package. Are you can do it manually 
-```
-yarn run prepublish
+  return (
+    <div>
+      <VideoPlayer videoUrl={'https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4'} snapshotAt={10} />
+    </div>
+  )
+}
 ```
 
-## Changelog
-Please visit the folowing file [CHANGELOG.md](./CHANGELOG.md)
+## Testing and Development
 
-## Things to Learn
-- [ReactJS](https://facebook.github.io/react/)
-- [ReactStoryBook](https://storybook.js.org/)
-- [Mocha](https://mochajs.org/)
-- [Airbnb/Enzyme](airbnb.io/enzyme/docs/api/)
+This component uses React Storybook, you may need to enable CORS in your browser in order to properly use current test cases.
 
+This package was bootstrapped using https://github.com/damaera/publish-react-component
+
+## Future development, milestones, and known issues
+
+1. enable SCSS styling OR migrate styling to one of: styled-components, JSS, or emotion.
+2. factor out dependancy on react-video-thumbnail
+3. improve browser support
+4. improve customizability - pass down styles, props, and element replacements through props

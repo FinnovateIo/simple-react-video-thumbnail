@@ -1,3 +1,3 @@
-var Test = require('./dist/Test')
+var VideoPlayer = require('./dist/VideoPlayer');
 
-exports.Test = Test.default
+exports.default = VideoPlayer.default;
