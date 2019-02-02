@@ -1,9 +1,12 @@
 {
-  "name": "simple-react-video",
-  "version": "0.0.1",
+  "name": "simple-react-video-thumbnail",
+  "version": "0.0.5",
   "description": "Provides video tag and thumbnail at arbitrary point in video where these features are supported",
   "author": "Ben Hart",
   "license": "MIT",
+  "repository": "https://github.com/FinnovateIo/React-simple-video",
+  "main": "./dist/VideoPlayer/VideoPlayer.js",
+  "unpkg": "./index.js",
   "keywords": [
     "react-component",
     "video",
@@ -37,7 +40,7 @@
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.2.3",
     "jsdom": "^8.1.0",
-    "mocha": "^5.2.0",
+    "mocha": "^2.4.5",
     "nodemon": "^1.18.9",
     "react": "^15.6.2",
     "react-addons-test-utils": "^15.6.2",
@@ -45,9 +48,9 @@
     "sinon": "^1.17.3"
   },
   "peerDependencies": {
-    "react": "~0.14.8 || ^15.0.0",
-    "react-dom": "~0.14.8 || ^15.0.0",
-    "prop-types": "^15.5.8"
+    "react": "~0.14.8 || ^15.0.0 || ^16.0.0",
+    "react-dom": "~0.14.8 || ^15.0.0 || ^16.0.0",
+    "prop-types": "^15.5.8 || 16.0.0"
   },
   "dependencies": {
     "react-video-thumbnail": "^0.1.3"
