@@ -1,6 +1,6 @@
 {
   "name": "simple-react-video-thumbnail",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Provides video tag and thumbnail at arbitrary point in video where these features are supported",
   "author": "Ben Hart",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/react": "^3.4.11",
+    "@storybook/react": "^5.2.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^6.0.2",
@@ -40,7 +40,7 @@
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.2.3",
     "jsdom": "^8.1.0",
-    "mocha": "^2.4.5",
+    "mocha": "^6.2.0",
     "nodemon": "^1.18.9",
     "react": "^15.6.2",
     "react-addons-test-utils": "^15.6.2",
