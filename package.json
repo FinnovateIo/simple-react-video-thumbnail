@@ -1,6 +1,6 @@
 {
   "name": "simple-react-video-thumbnail",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Provides video tag and thumbnail at arbitrary point in video where these features are supported",
   "author": "Ben Hart",
   "license": "MIT",

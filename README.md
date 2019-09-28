@@ -1,4 +1,4 @@
-# React Simple Video
+# simple-react-video-thumbnail
 
 This react component is designed to provide a quick, seamless way to display an html5 video component, and to select a point from the video to use as a thumbnail.
 
@@ -16,7 +16,7 @@ Currently, the component uses only two properties, the video source URL(string),
 ## Usage
 
 ```
-import VideoPlayer from 'react-simple-video'
+import VideoPlayer from 'simple-react-video-thumbnail'
 
 // ...
 render() {
