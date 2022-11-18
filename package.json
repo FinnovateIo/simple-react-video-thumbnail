@@ -24,7 +24,7 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/react": "^5.2.1",
+    "@storybook/react": "^6.5.13",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^6.0.2",
